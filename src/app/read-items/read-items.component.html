@@ -1,0 +1,11 @@
+<div *ngIf="items$">
+   <h3>Shopping Cart Items</h3><br>
+   <ul>
+     <li *ngFor="let item of items$ | async; let i = index">
+      <p>Id: {{item.id}}</p>
+      <p>Name: {{item.name}}</p>
+      <p *ngIf="item.price">Price: {{item.price}}</p>
+      <button (click)="removeItem(i)">Remove</button>
+     </li>
+   </ul>
+</div>
