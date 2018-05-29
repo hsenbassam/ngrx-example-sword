@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { reducer } from './_store/shopping-item.reducer';
+import { shoppingItemReducer } from './_store/shopping-item.reducer';
 import { ReadItemsComponent } from './read-items/read-items.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { NotificationsComponent } from './notifications/notifications.component';
@@ -18,7 +18,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
   imports: [
     BrowserModule,
     StoreModule.forRoot({
-      items: reducer
+      items: shoppingItemReducer
     })
   ],
   providers: [],

@@ -22,7 +22,6 @@ export class AddItemComponent implements OnInit {
       name: name.value,
       price: price.value
     };
-
     this.store.dispatch(new ShoppingItemActions.AddShoppingItem(addeditem));
 
   }
