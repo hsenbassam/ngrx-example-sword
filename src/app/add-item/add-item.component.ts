@@ -17,10 +17,11 @@ export class AddItemComponent implements OnInit {
   }
 
   addItem(id, name, price?) {
+    if (id === '' && name === '') { return; }
     const addeditem: ShoppingItem = {
-      id: id.value,
-      name: name.value,
-      price: price.value
+      id: id,
+      name: name,
+      price: price
     };
     this.store.dispatch(new ShoppingItemActions.AddShoppingItem(addeditem));
 

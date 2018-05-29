@@ -15,7 +15,7 @@ export class ReadItemsComponent implements OnInit {
   items$: Observable<ShoppingItem[]>;
 
   constructor(private store: Store<AppState>) {
-    this.items$ = store.select('items');
+    this.items$ = store.select(state => state.items);
   }
 
   ngOnInit() {
